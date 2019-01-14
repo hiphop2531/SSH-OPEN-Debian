@@ -28,9 +28,8 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 # install wget and curl
 apt-get update;apt-get -y install wget curl;
 
-# set time GMT +8
-ln -fs /usr/share/zoneinfo/Asia/Malaysia /etc/localtime
-
+# set time GMT +7
+ln -fs /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
@@ -194,21 +193,21 @@ echo "nginx    : 81"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
-echo "menu (Senarai perintah)"  | tee -a log-install.txt
-echo "usernew (Membuat Akaun SSH)"  | tee -a log-install.txt
-echo "trial (Membuat Akaun Trial)"  | tee -a log-install.txt
-echo "hapus (Menghapus Akaun SSH)"  | tee -a log-install.txt
-echo "login (Semak login user)"  | tee -a log-install.txt
-echo "member (Senarai user)"  | tee -a log-install.txt
-echo "resvis (Restart Service dropbear, webmin, squid3, openvpn dan ssh)"  | tee -a log-install.txt
-echo "reboot (Reboot VPS)"  | tee -a log-install.txt
-echo "speedtest (Speedtest VPS)"  | tee -a log-install.txt
-echo "about (Informasi tentang script auto install)"  | tee -a log-install.txt
+echo "menu (เมนูสคริปต์)"  | tee -a log-install.txt
+echo "usernew (เพิ่มผู้ใช้ใหม่ SSH)"  | tee -a log-install.txt
+echo "trial (ทดลองใช้งาน SSH)"  | tee -a log-install.txt
+echo "hapus (ลบบัญชี SSH)"  | tee -a log-install.txt
+echo "login (ตรวจสอบการเข้าสู่ระบบของผู้ใช้)"  | tee -a log-install.txt
+echo "member (รายชื่อผู้ใช้)"  | tee -a log-install.txt
+echo "resvis (เริ่มบริการใหม่ dropbear, webmin, squid3, openvpn dan ssh)"  | tee -a log-install.txt
+echo "reboot (รีบูต VPS)"  | tee -a log-install.txt
+echo "speedtest (เทสสปีด VPS)"  | tee -a log-install.txt
+echo "about (ข้อมูลเกี่ยวกับสคริปต์การติดตั้งอัตโนมัติ)"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Feature lain"  | tee -a log-install.txt
 echo "----------"  | tee -a log-install.txt
 echo "Webmin   : http://$MYIP:10000/"  | tee -a log-install.txt
-echo "Timezone : Asia/Malaysia (GMT +8)"  | tee -a log-install.txt
+echo "Timezone : Asia/Bangkok (GMT +7)"  | tee -a log-install.txt
 echo "IPv6     : [off]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Modified by Aiman Amir"  | tee -a log-install.txt
