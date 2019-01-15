@@ -21,4 +21,4 @@ Sebelum script Auto Install berikut diinstall, pastikan bahwa VPS Anda mempunyai
 
 Auto-Install Script :-
 
-apt-get install wget && wget https://raw.github.com/blazevpn/autoscript/master/debian7.sh && ./debian7.sh
+apt-get install wget && wget https://raw.githubusercontent.com/hiphop2531/SSH-OPEN-Debian/master/debian7.sh && ./debian7.sh
